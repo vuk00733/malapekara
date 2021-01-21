@@ -41,7 +41,7 @@ function Cards() {
         </article>
         <article className="card ">
           <header className="card-header">
-            <p>Proizvod</p>
+            <p>proizvod</p>
             <h2>Opis Proizvoda</h2>
           </header>
           <img src={png} alt="placeholder" className="card-image" />
