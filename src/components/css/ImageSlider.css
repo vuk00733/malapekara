@@ -1,0 +1,76 @@
+.slider {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.centered {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.image {
+  width: 1200px;
+  height: 600px;
+}
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  font-size: 3rem;
+  color: #e0d1b9;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  font-size: 3rem;
+  color: #e0d1b9;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}
+.mobile-logo {
+  display: none;
+}
+@media screen and (max-width: 660px) {
+  .slider-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  .right-arrow {
+    top: 80%;
+    color: wheat;
+  }
+  .left-arrow {
+    top: 80%;
+    color: wheat;
+  }
+  .image {
+    width: 100%;
+    height: 100%;
+  }
+  .mobile-logo {
+    font-size: 3rem;
+    position: relative;
+    left: 20%;
+    bottom: 10%;
+    font-family: "Dancing Script", cursive;
+  }
+}

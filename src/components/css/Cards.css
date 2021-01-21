@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap");
+
+a {
+  text-decoration: none;
+}
+
+.card-list {
+  display: flex;
+  padding: 3rem;
+  overflow-x: scroll;
+}
+
+.card-list::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.card-list::-webkit-scrollbar-thumb {
+  background: #2e4b01;
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+    inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.card-list::-webkit-scrollbar-track {
+  background: linear-gradient(90deg, #201c29, #201c29 1px, #17141d 0, #17141d);
+}
+
+.card {
+  height: 350px;
+  width: 400px;
+  min-width: 250px;
+  padding: 1.5rem;
+  background: #e0d1b9;
+  box-shadow: -1rem 0 3rem rgb(97, 93, 93);
+  display: grid;
+  grid-template-rows: 1fr 1fr 4fr;
+  grid-gap: 1em;
+  transition: 0.2s;
+  margin: 0;
+  scroll-snap-align: start;
+  clear: both;
+  position: relative;
+}
+
+.card:focus-within ~ .card,
+.card:hover ~ .card {
+  transform: translateX(130px);
+}
+
+.card:hover {
+  transform: translateY(-1rem);
+}
+
+.card:not(:first-child) {
+  margin-left: -130px;
+}
+
+.card-header {
+  grid-row: 1/2;
+  border-radius: 20px;
+  padding: 10px;
+}
+.card-image {
+  grid-row: 2/6;
+  width: 400px;
+  height: 200px;
+  padding: 10px;
+  object-fit: cover;
+}
+.card2 {
+  display: none;
+}
+h1{
+  text-align: center;
+  justify-content: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 60px;
+  margin-top: 4rem;
+}
+@media screen and (max-width: 1020px) and (min-width: 220px) {
+  .card-list {
+    display: grid;
+    grid-template-rows: repeat(4, 400px);
+    overflow: hidden;
+    margin: 0;
+    padding: 1rem;
+  }
+  .card {
+    display: none;
+  }
+  .card2:hover ~ .card2 {
+    transform: translateX(50px);
+    transition-duration: 0.7s;
+  }
+  
+  .card2:hover {
+    transform: translateY(-80px);
+    transition-duration: 2s;
+  }
+  .hover:hover{
+      transform:  translateY(+20px);
+  }
+  .card2 {
+    display: grid;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    background: #e0d1b9;
+    box-shadow: -1rem 0 3rem #000;
+    grid-template-rows: 1fr 1fr 4fr;
+    grid-template-columns: 100%;
+    grid-gap: 1em;
+  }
+  .header2 {
+    grid-row: 1/2;
+    border-radius: 20px;
+    padding: 10px;
+    width: 200px;
+  }
+  .image2 {
+    grid-row: 2/6;
+    width: 300px;
+    height: 200px;
+  }
+}
